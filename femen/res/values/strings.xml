@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FEMEN.org</string>
+    <string name="refresh">Refresh</string>
+    <string name="about">About</string>
+    <string name="liken">Facebook</string>
+    <string name="tweet">Twitter</string>
+    <string name="home">Home</string>
+    <string name="shop">Shop</string>
+    <string name="flattr">PayPal</string>
+
+</resources>

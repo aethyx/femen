@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FEMEN.org</string>
+    <string name="refresh">Обновить</string>
+    <string name="about">около</string>
+    <string name="liken">Facebook</string>
+    <string name="tweet">Twitter</string>
+    <string name="home">домой</string>
+    <string name="shop">магазин</string>
+    <string name="flattr">Пожертвуйте</string>
+
+</resources>

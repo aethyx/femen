@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="org.femen.MainActivity" >
+
+    <item android:id="@+id/home" android:title="@string/home" android:icon="@drawable/ic_home" android:showAsAction="ifRoom|withText" android:orderInCategory="100"/>
+        <item android:id="@+id/shop" android:title="@string/shop" android:icon="@drawable/ic_action_shop" android:showAsAction="ifRoom|withText" android:orderInCategory="104"/>
+    <item android:id="@+id/liken" android:title="@string/liken" android:icon="@drawable/ic_action_like" android:showAsAction="ifRoom|withText" android:orderInCategory="103"/>
+    <item android:id="@+id/tweet" android:title="@string/tweet" android:icon="@drawable/ic_action_tweet" android:showAsAction="ifRoom|withText" android:orderInCategory="102"/>
+    <item android:id="@+id/refresh" android:title="@string/refresh" android:icon="@drawable/ic_action_refresh" android:showAsAction="ifRoom|withText" android:orderInCategory="101"/>
+    <item android:id="@+id/about" android:orderInCategory="106" android:icon="@drawable/ic_action_info" android:title="@string/about" android:showAsAction="ifRoom|withText"/>
+<item android:id="@+id/flattr" android:title="@string/flattr" android:icon="@drawable/ic_action_paypal" android:showAsAction="ifRoom|withText" android:orderInCategory="105"/>
+</menu>
