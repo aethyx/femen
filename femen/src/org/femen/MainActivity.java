@@ -127,7 +127,7 @@ public class MainActivity extends Activity {
         switch (item.getItemId())
         {
         case R.id.shop:
-            browser.loadUrl("http://femenshop.miiduu.com/");
+            browser.loadUrl("http://femenshop.com/");
             return true;
         
         case R.id.home:
@@ -135,7 +135,7 @@ public class MainActivity extends Activity {
             return true;            
             
         case R.id.flattr:
-            browser.loadUrl("https://www.paypal.com/fr/cgi-bin/webscr?cmd=_flow&SESSION=k7mVl-JfNkV5A5Nvke5YXJ41F3pR1_PsBCECTl3zl2WxtnXMFonmMK7jVTe&dispatch=5885d80a13c0db1f8e263663d3faee8d69a70501aadbc2ff6a1e7e8cc0df6b0b");
+            browser.loadUrl("http://femenshop.com/pages/donation");
             return true;
             
         case R.id.tweet:
@@ -154,7 +154,7 @@ public class MainActivity extends Activity {
         	AlertDialog.Builder builder = new AlertDialog.Builder(this);
         	builder.setTitle("FEMEN/ФЕМЕН");
         	builder.setIcon(R.drawable.ic_launcher);
-        	builder.setMessage("Thank you for supporting FEMEN!" + "\n" + "Version 1.0.0 [BETA]" + "\n" + "Email: femen.ua@gmail.com" + "\n" + "\u00A9 " + "femen.org, 2014");
+        	builder.setMessage("Thank you for supporting FEMEN!" + "\n" + "Version 1.0.1 [BETA]" + "\n" + "Email: femen.ua@gmail.com" + "\n" + "\u00A9 " + "femen.org, 2014-2015");
         	builder.setPositiveButton("OK", null);
         	AlertDialog dialog = builder.show();
 
