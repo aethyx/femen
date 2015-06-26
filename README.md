@@ -20,8 +20,9 @@ Basically it's a compilation (mixtape?) summed up in a free and neat app:
 * official Logos in use
 * progress bar in Ukrainian colours
 
-It's working, it's free, lightweight and can be copied to and SD card. Feel free to fork it and/or develop this any
-further!
+It's working, it's free, lightweight and can be copied to an SD card. 
+
+Feel free to fork it and/or develop this any further!
 
 ## Installation
 
