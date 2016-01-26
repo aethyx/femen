@@ -5,7 +5,10 @@
     <string name="refresh">Обновить</string>
     <string name="about">около</string>
     <string name="liken">Facebook</string>
+    <string name="instagram">Instagram</string>
     <string name="tweet">Twitter</string>
+    <string name="youtube">YouTube</string>
+    <string name="pinterest">Pinterest</string>
     <string name="home">домой</string>
     <string name="shop">магазин</string>
     <string name="flattr">Пожертвуйте</string>

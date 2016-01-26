@@ -141,9 +141,21 @@ public class MainActivity extends Activity {
         case R.id.tweet:
             browser.loadUrl("https://twitter.com/FEMEN_Movement");
             return true;
+        
+        case R.id.pinterest:
+            browser.loadUrl("https://pinterest.com/femen0126/");
+            return true;
+            
+        case R.id.instagram:
+            browser.loadUrl("https://instagram.com/femen_international/");
+            return true;
+            
+        case R.id.youtube:
+            browser.loadUrl("https://youtube.com/user/FemenLight");
+            return true;
             
         case R.id.liken:
-            browser.loadUrl("https://www.facebook.com/FEMEN.fra?ref=hl");
+            browser.loadUrl("https://facebook.com/FEMEN.fra?ref=hl");
             return true;
  
         case R.id.refresh:
@@ -154,7 +166,7 @@ public class MainActivity extends Activity {
         	AlertDialog.Builder builder = new AlertDialog.Builder(this);
         	builder.setTitle("FEMEN/ФЕМЕН");
         	builder.setIcon(R.drawable.ic_launcher);
-        	builder.setMessage("Thank you for supporting FEMEN!" + "\n" + "Version 1.0.1 [BETA]" + "\n" + "Email: femen.ua@gmail.com" + "\n" + "\u00A9 " + "femen.org, 2014-2015");
+        	builder.setMessage("Thank you for supporting FEMEN!" + "\n" + "Version 1.0.2" + "\n" + "Email: femen.ua@gmail.com" + "\n" + "\u00A9 " + "femen.org, 2014-2016");
         	builder.setPositiveButton("OK", null);
         	AlertDialog dialog = builder.show();
 

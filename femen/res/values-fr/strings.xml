@@ -5,7 +5,10 @@
     <string name="refresh">Actualiser</string>
     <string name="about">Sur</string>
     <string name="liken">Facebook</string>
+    <string name="instagram">Instagram</string>
     <string name="tweet">Twitter</string>
+    <string name="youtube">YouTube</string>
+    <string name="pinterest">Pinterest</string>
     <string name="home">Maison</string>
     <string name="shop">Boutique</string>
     <string name="flattr">Donner</string>

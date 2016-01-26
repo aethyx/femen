@@ -24,26 +24,32 @@ public final class R {
     public static final class drawable {
         public static final int ic_action_desktop=0x7f020000;
         public static final int ic_action_info=0x7f020001;
-        public static final int ic_action_like=0x7f020002;
-        public static final int ic_action_paypal=0x7f020003;
-        public static final int ic_action_refresh=0x7f020004;
-        public static final int ic_action_shop=0x7f020005;
-        public static final int ic_action_tweet=0x7f020006;
-        public static final int ic_home=0x7f020007;
-        public static final int ic_launcher=0x7f020008;
-        public static final int ic_launcher2=0x7f020009;
-        public static final int progress_drawable=0x7f02000a;
+        public static final int ic_action_instagram=0x7f020002;
+        public static final int ic_action_like=0x7f020003;
+        public static final int ic_action_paypal=0x7f020004;
+        public static final int ic_action_pinterest=0x7f020005;
+        public static final int ic_action_refresh=0x7f020006;
+        public static final int ic_action_shop=0x7f020007;
+        public static final int ic_action_tweet=0x7f020008;
+        public static final int ic_action_youtube=0x7f020009;
+        public static final int ic_home=0x7f02000a;
+        public static final int ic_launcher=0x7f02000b;
+        public static final int ic_launcher2=0x7f02000c;
+        public static final int progress_drawable=0x7f02000d;
     }
     public static final class id {
-        public static final int about=0x7f080007;
-        public static final int flattr=0x7f080008;
+        public static final int about=0x7f08000a;
+        public static final int flattr=0x7f08000b;
         public static final int home=0x7f080002;
+        public static final int instagram=0x7f080005;
         public static final int liken=0x7f080004;
+        public static final int pinterest=0x7f080008;
         public static final int progressBar1=0x7f080000;
-        public static final int refresh=0x7f080006;
+        public static final int refresh=0x7f080009;
         public static final int shop=0x7f080003;
-        public static final int tweet=0x7f080005;
+        public static final int tweet=0x7f080006;
         public static final int webView1=0x7f080001;
+        public static final int youtube=0x7f080007;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -54,12 +60,15 @@ public final class R {
     public static final class string {
         public static final int about=0x7f050002;
         public static final int app_name=0x7f050000;
-        public static final int flattr=0x7f050007;
-        public static final int home=0x7f050005;
+        public static final int flattr=0x7f05000a;
+        public static final int home=0x7f050008;
+        public static final int instagram=0x7f050004;
         public static final int liken=0x7f050003;
+        public static final int pinterest=0x7f050007;
         public static final int refresh=0x7f050001;
-        public static final int shop=0x7f050006;
-        public static final int tweet=0x7f050004;
+        public static final int shop=0x7f050009;
+        public static final int tweet=0x7f050005;
+        public static final int youtube=0x7f050006;
     }
     public static final class style {
         /** 
