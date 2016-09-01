@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
 	    browser.getSettings().setLoadWithOverviewMode(true);
 	    browser.getSettings().setUseWideViewPort(true);		    
 	    browser.getSettings().setJavaScriptEnabled(true);
-	    browser.getSettings().setJavaScriptCanOpenWindowsAutomatically(false);
+	    browser.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 	    browser.getSettings().setPluginState(PluginState.ON);
 	    browser.getSettings().setBuiltInZoomControls(true);
 	    browser.setVerticalScrollBarEnabled(false);
@@ -136,7 +136,7 @@ public class MainActivity extends Activity {
             return true;            
             
         case R.id.flattr:
-            browser.loadUrl("http://www.femenus.com/donate.html");
+            browser.loadUrl("file:///android_asset/donations.xhtml");
             return true;
             
         case R.id.tweet:
@@ -148,7 +148,7 @@ public class MainActivity extends Activity {
             return true;
             
         case R.id.instagram:
-            browser.loadUrl("https://instagram.com/femen_international/");
+            browser.loadUrl("https://www.instagram.com/femenofficial/");
             return true;
             
         case R.id.youtube:
@@ -156,7 +156,7 @@ public class MainActivity extends Activity {
             return true;
             
         case R.id.liken:
-            browser.loadUrl("https://www.facebook.com/FEMEN.International.Official/");
+            browser.loadUrl("https://www.facebook.com/FEMEN.fra");
             return true;
  
         case R.id.refresh:
@@ -167,7 +167,7 @@ public class MainActivity extends Activity {
         	AlertDialog.Builder builder = new AlertDialog.Builder(this);
         	builder.setTitle("FEMEN/ФЕМЕН");
         	builder.setIcon(R.drawable.ic_launcher);
-        	builder.setMessage("Thank you for supporting FEMEN!" + "\n" + "Version 1.0.3" + "\n" + "Email: femen.ua@gmail.com" + "\n" + "Skype: femen.ua" + "\n" +"\u00A9 " + "femen.org, 2014-2016");
+        	builder.setMessage("Thank you for supporting FEMEN!" + "\n" + "Version 1.0.4" + "\n" + "Email: femen.ua@gmail.com" + "\n" + "Skype: femen.ua" + "\n" + "GitHub: github.com/aethyx/femen" + "\n" +"\u00A9 " + "femen.org, 2014-2016");
         	builder.setPositiveButton("OK", null);
         	AlertDialog dialog = builder.show();
 
