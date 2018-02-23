@@ -15,6 +15,32 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!-- This is styling for action bar -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <!--  change the text styling of options menu items</item>-->
+        <item name="android:itemTextAppearance">@style/MyActionBar.MenuTextStyle</item>
+        <!-- change the background of options menu-->
+        <item name="android:itemBackground">@color/color1</item>
+        
     </style>
+    
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/color1</item>
+        <!--  color for background split... -->
+        <item name="android:backgroundSplit">@color/color1</item>
+        <item name="android:titleTextStyle">@style/MyActionBarTitle</item>
+    </style>
+
+    <style name="MyActionBarTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/color2</item>
+    </style>
+
+    <style name="MyActionBar.MenuTextStyle" parent="style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/color2</item>
+    </style>
+    
+    <style name="TextColor">
+    	<item name="android:textColor">@android:color/white</item>
+	</style>
 
 </resources>

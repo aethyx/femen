@@ -12,5 +12,13 @@
     <string name="home">Maison</string>
     <string name="shop">Boutique</string>
     <string name="flattr">Donner</string>
-
+	<string name="app_credits">
+	    \nFEMEN/ФЕМЕН pour Androids\n\n
+	    Merci de votre soutient FEMEN!\n
+        Version 1.0.5\n
+        Email: femen.ua@gmail.com\n
+        Skype: femen.ua\n
+        GitHub: github.com/aethyx/femen\n\n
+        \u00A9 femen.org, 2014-2018\n</string>
+        
 </resources>

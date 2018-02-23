@@ -1,19 +1,22 @@
-//Autor: Sascha Schroeder
-//EMail: sascha.schroeder@aethyx.com
-//Website: http://aethyx.eu
-//Date: since end of July 2014
-// --- from Sascha to Inna ---
+// Android App for FEMEN
+// Author: Sascha Schroeder
+// Email: sascha.schroeder@aethyx.com
+// Website: https://aethyx.eu
+// Date: since end of July 2014
+// --- from Sascha to Inna and her courageous movement ---
+// License: GPL Vx, see https://en.wikipedia.org/wiki/Free_software "Free Software"
+// Contribute to this open source project: https://github.com/aethyx/femen.git
 package org.femen;
 
 import android.app.Activity;
-import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.DownloadListener;
 import android.webkit.WebChromeClient;
@@ -21,19 +24,19 @@ import android.webkit.WebSettings;
 import android.webkit.WebSettings.PluginState;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import org.femen.R;
 
 public class MainActivity extends Activity {
 
-	private WebView browser;
+	private WebView femen;
 	//ProgressDialog progress;
 	ProgressBar loadingProgressBar;
 	
 	@Override
     protected void onSaveInstanceState(Bundle outState) {
-        browser.saveState(outState);
+        femen.saveState(outState);
     }
 	
 	@Override
@@ -42,23 +45,23 @@ public class MainActivity extends Activity {
 	    //getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 	    this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 	    setContentView(R.layout.activity_main);
-	    browser = (WebView)findViewById(R.id.webView1);
-	    browser.getSettings().setLoadsImagesAutomatically(true);
-	    browser.getSettings().setLoadWithOverviewMode(true);
-	    browser.getSettings().setUseWideViewPort(true);		    
-	    browser.getSettings().setJavaScriptEnabled(true);
-	    browser.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
-	    browser.getSettings().setPluginState(PluginState.ON);
-	    browser.getSettings().setBuiltInZoomControls(true);
-	    browser.setVerticalScrollBarEnabled(false);
-	    browser.getSettings().setAllowFileAccess(true);
-	    browser.getSettings().setDatabaseEnabled(true);
-	    browser.getSettings().setDomStorageEnabled(true);
-	    browser.getSettings().setAppCacheEnabled(true);
-	    browser.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+	    femen = (WebView)findViewById(R.id.webView1);
+	    femen.getSettings().setLoadsImagesAutomatically(true);
+	    femen.getSettings().setLoadWithOverviewMode(true);
+	    femen.getSettings().setUseWideViewPort(true);		    
+	    femen.getSettings().setJavaScriptEnabled(true);
+	    femen.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+	    femen.getSettings().setPluginState(PluginState.ON);
+	    //femen.getSettings().setBuiltInZoomControls(true);
+	    femen.setVerticalScrollBarEnabled(false);
+	    femen.getSettings().setAllowFileAccess(true);
+	    femen.getSettings().setDatabaseEnabled(true);
+	    femen.getSettings().setDomStorageEnabled(true);
+	    femen.getSettings().setAppCacheEnabled(true);
+	    femen.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
 	    
-	    // Enable downloads of files within webView
-        browser.setDownloadListener(new DownloadListener() {
+	    // Enable downloads of files within the app
+        femen.setDownloadListener(new DownloadListener() {
             public void onDownloadStart(String url, String userAgent,
                     String contentDisposition, String mimetype,
                     long contentLength) {
@@ -70,7 +73,7 @@ public class MainActivity extends Activity {
 	    
 		// Attach the ProgressBar layout
         loadingProgressBar=(ProgressBar)findViewById(R.id.progressBar1);
-        browser.setWebChromeClient(new WebChromeClient() {
+        femen.setWebChromeClient(new WebChromeClient() {
 
             // this will be called on page loading progress
             @Override
@@ -90,27 +93,34 @@ public class MainActivity extends Activity {
             
         });
         
-        browser.setWebViewClient(new WebViewClient(){
+        femen.setWebViewClient(new WebViewClient(){
         	// load url
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
                 return true;
             }
+            @Override
+            public void onPageFinished(WebView view, String url)  
+            {  
+            	//view.loadUrl("javascript:(function() { " + "var head = document.getElementsByClassName('mh-header-mobile-nav clearfix').style.display='none'; " +"})()");
+            	//view.loadUrl("javascript:(function() { " + "var head = document.getElementsByClassName('mh-preheader').style.display='none'; " +"})()");
+            	//view.loadUrl("javascript:(function() { " + "var foot = document.getElementsByClassName('mh-footer').style.display='none'; " +"})()");
+            }  
         });
         if (savedInstanceState != null)
         {
-        	browser.restoreState(savedInstanceState);
+        	femen.restoreState(savedInstanceState);
         }
         else
         {
-        	browser.loadUrl("http://femen.org");
+        	femen.loadUrl("https://femen.org");
         }
     }
 	
 	@Override
 	public void onBackPressed (){
-        if (browser.isFocused() && browser.canGoBack()) {
-        	browser.goBack();
+        if (femen.isFocused() && femen.canGoBack()) {
+        	femen.goBack();
         }else {
                 MainActivity.this.finish();
         }
@@ -128,52 +138,56 @@ public class MainActivity extends Activity {
         switch (item.getItemId())
         {
         case R.id.shop:
-            browser.loadUrl("http://femenshop.com/");
+            femen.loadUrl("https://femenshop.com/");
             return true;
         
         case R.id.home:
-            browser.loadUrl("http://femen.org");
+            femen.loadUrl("https://femen.org");
             return true;            
             
         case R.id.flattr:
-            browser.loadUrl("file:///android_asset/donations.xhtml");
+            femen.loadUrl("file:///android_asset/donations.xhtml");
             return true;
             
         case R.id.tweet:
-            browser.loadUrl("https://twitter.com/FEMEN_Movement");
+            femen.loadUrl("https://twitter.com/FEMEN_Movement");
             return true;
         
         case R.id.pinterest:
-            browser.loadUrl("https://pinterest.com/femen0126/");
+            femen.loadUrl("https://pinterest.com/femen0126/");
             return true;
             
         case R.id.instagram:
-            browser.loadUrl("https://www.instagram.com/femenofficial/");
+            femen.loadUrl("https://www.instagram.com/femen_movement/");
             return true;
             
         case R.id.youtube:
-            browser.loadUrl("https://youtube.com/user/FemenLight");
+            femen.loadUrl("https://youtube.com/user/FemenLight");
             return true;
             
         case R.id.liken:
-            browser.loadUrl("https://www.facebook.com/FEMEN.fra");
+            femen.loadUrl("https://de-de.facebook.com/femenmovement/");
             return true;
  
         case R.id.refresh:
-        	browser.reload();
+        	femen.reload();
             return true;
  
         case R.id.about:
-        	AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        	builder.setTitle("FEMEN/ФЕМЕН");
-        	builder.setIcon(R.drawable.ic_launcher);
-        	builder.setMessage("Thank you for supporting FEMEN!" + "\n" + "Version 1.0.4" + "\n" + "Email: femen.ua@gmail.com" + "\n" + "Skype: femen.ua" + "\n" + "GitHub: github.com/aethyx/femen" + "\n" +"\u00A9 " + "femen.org, 2014-2016");
-        	builder.setPositiveButton("OK", null);
-        	AlertDialog dialog = builder.show();
+        	final Dialog dialog = new Dialog(this); // Context, this, etc.
+        	dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setContentView(R.layout.about);
+            //set up button
+            Button button = (Button) dialog.findViewById(R.id.dialog_ok);
+            button.setOnClickListener(new View.OnClickListener() {
+            @Override
+                public void onClick(View v) {
+                dialog.dismiss();
 
-        	TextView messageView = (TextView)dialog.findViewById(android.R.id.message);
-        	messageView.setGravity(Gravity.LEFT);
-            return true;
+                }
+            });
+            dialog.show();
+			return true;
             
         default:
             return super.onOptionsItemSelected(item);

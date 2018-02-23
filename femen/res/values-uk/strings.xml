@@ -2,19 +2,19 @@
 <resources>
 
     <string name="app_name">ФЕМЕН.org</string>
-    <string name="refresh">Обновить</string>
-    <string name="about">около</string>
+    <string name="refresh">оновити</string>
+    <string name="about">Про</string>
     <string name="liken">Facebook</string>
     <string name="instagram">Instagram</string>
     <string name="tweet">Twitter</string>
     <string name="youtube">YouTube</string>
     <string name="pinterest">Pinterest</string>
-    <string name="home">домой</string>
-    <string name="shop">магазин</string>
-    <string name="flattr">жертвовать</string>
+    <string name="home">Будинок</string>
+    <string name="shop">Магазин</string>
+    <string name="flattr">Пожертвувати</string>
     <string name="app_credits">
-        \nFEMEN/ФЕМЕН для андроидов\n\n
-        Спасибо, что поддержали FEMEN!\n
+        \nFEMEN/ФЕМЕН для андроїдів\n\n
+        Дякую за підтримку ФЕМЕН!\n
         Version 1.0.5\n
         Email: femen.ua@gmail.com\n
         Skype: femen.ua\n
